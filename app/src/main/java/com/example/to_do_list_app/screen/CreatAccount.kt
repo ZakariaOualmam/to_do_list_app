@@ -3,6 +3,7 @@ package com.example.to_do_list_app.screen
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -31,65 +32,75 @@ import com.example.to_do_list_app.R
 
 @Composable
 fun CreateAccount(navController: NavController) {
-    Column(
+    Box(
         modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
     ) {
         Image(
-            painter = painterResource(R.drawable.creataccount),
-            contentDescription = "Login Image",
-            modifier = Modifier.height(150.dp)
-        )
-        Spacer(modifier = Modifier.height(24.dp))
-        Text("Create account", fontSize = 28.sp , fontWeight = FontWeight.Bold)
-
-        Spacer(modifier = Modifier.height(24.dp))
-        var email by remember { mutableStateOf("") }
-        var password by remember { mutableStateOf("") }
-        var confirmPassword by remember { mutableStateOf("") }
-        OutlinedTextField(
-            value = email,
-            onValueChange = { email = it },
-            label = { Text("Email") },
-            placeholder = { Text("example@gmail.com") },
-            shape = RoundedCornerShape(25.dp)
+            painter = painterResource(R.drawable.background),
+            contentDescription = "background Image",
+            modifier = Modifier.fillMaxSize()
         )
 
-        Spacer(modifier = Modifier.height(12.dp))
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Image(
+                painter = painterResource(R.drawable.creataccount),
+                contentDescription = "Login Image",
+                modifier = Modifier.height(150.dp)
+            )
+            Spacer(modifier = Modifier.height(24.dp))
+            Text("Create account", fontSize = 28.sp , fontWeight = FontWeight.Bold)
 
-        OutlinedTextField(
-            value = password,
-            onValueChange = { password = it },
-            label = { Text("Password") },
-            visualTransformation = PasswordVisualTransformation(),
-            shape = RoundedCornerShape(25.dp)
-        )
+            Spacer(modifier = Modifier.height(24.dp))
+            var email by remember { mutableStateOf("") }
+            var password by remember { mutableStateOf("") }
+            var confirmPassword by remember { mutableStateOf("") }
+            OutlinedTextField(
+                value = email,
+                onValueChange = { email = it },
+                label = { Text("Email") },
+                placeholder = { Text("example@gmail.com") },
+                shape = RoundedCornerShape(25.dp)
+            )
 
-        Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(12.dp))
 
-        OutlinedTextField(
-            value = confirmPassword,
-            onValueChange = { confirmPassword = it },
-            label = { Text("Confirm Password") },
-            visualTransformation = PasswordVisualTransformation(),
-            shape = RoundedCornerShape(25.dp)
-        )
+            OutlinedTextField(
+                value = password,
+                onValueChange = { password = it },
+                label = { Text("Password") },
+                visualTransformation = PasswordVisualTransformation(),
+                shape = RoundedCornerShape(25.dp)
+            )
 
-        Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(12.dp))
 
-        Button(onClick = {}, modifier = Modifier.width(160.dp)) {
-            Text("Create ", fontWeight = FontWeight.Medium)
-        }
+            OutlinedTextField(
+                value = confirmPassword,
+                onValueChange = { confirmPassword = it },
+                label = { Text("Confirm Password") },
+                visualTransformation = PasswordVisualTransformation(),
+                shape = RoundedCornerShape(25.dp)
+            )
 
-        Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(20.dp))
 
-        Text(
-            text = "Already have an account? Login",
-            color = Color.Blue,
-            modifier = Modifier.clickable {
-                navController.popBackStack()
+            Button(onClick = {}, modifier = Modifier.width(160.dp)) {
+                Text("Create ", fontWeight = FontWeight.Medium)
             }
-        )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Text(
+                text = "Already have an account? Login",
+                color = Color.Blue,
+                modifier = Modifier.clickable {
+                    navController.popBackStack()
+                }
+            )
+        }
     }
 }
