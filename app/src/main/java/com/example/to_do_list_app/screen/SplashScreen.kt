@@ -37,13 +37,13 @@ fun SplashScreen(navController: NavController) {
         Column(
             modifier = Modifier.fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center // ✅ هادي هي التعديل الوحيد
+            verticalArrangement = Arrangement.Center
         ) {
 
             Image(
                 painter = painterResource(R.drawable.logo),
                 contentDescription = "Logo Image",
-                modifier = Modifier.height(150.dp)
+                modifier = Modifier.height(200.dp).width(200.dp)
             )
 
             Spacer(modifier = Modifier.height(24.dp))
@@ -70,7 +70,7 @@ fun SplashScreen(navController: NavController) {
                 onClick = {
                     navController.navigate("create")
                 },
-                modifier = Modifier.width(160.dp)
+                modifier = Modifier.width(180.dp)
             ) {
                 Text("Get Started", fontWeight = FontWeight.Medium)
             }
