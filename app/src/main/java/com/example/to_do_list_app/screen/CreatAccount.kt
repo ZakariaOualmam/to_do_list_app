@@ -35,11 +35,6 @@ fun CreateAccount(navController: NavController) {
     Box(
         modifier = Modifier.fillMaxSize(),
     ) {
-        Image(
-            painter = painterResource(R.drawable.creataccount),
-            contentDescription = "background Image",
-            modifier = Modifier.fillMaxSize()
-        )
 
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -48,7 +43,7 @@ fun CreateAccount(navController: NavController) {
         ) {
             Image(
                 painter = painterResource(R.drawable.creataccount),
-                contentDescription = "Login Image",
+                contentDescription = "create Image",
                 modifier = Modifier.height(150.dp)
             )
             Spacer(modifier = Modifier.height(24.dp))
