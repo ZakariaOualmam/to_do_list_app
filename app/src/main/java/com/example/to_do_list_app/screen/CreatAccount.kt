@@ -36,7 +36,7 @@ fun CreateAccount(navController: NavController) {
         modifier = Modifier.fillMaxSize(),
     ) {
         Image(
-            painter = painterResource(R.drawable.background),
+            painter = painterResource(R.drawable.creataccount),
             contentDescription = "background Image",
             modifier = Modifier.fillMaxSize()
         )
