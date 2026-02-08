@@ -35,17 +35,15 @@ fun SplashScreen(navController: NavController) {
     ) {
 
         Column(
-            modifier = Modifier
-                .fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center // ✅ هادي هي التعديل الوحيد
         ) {
-
-            Spacer(modifier = Modifier.height(60.dp))
 
             Image(
                 painter = painterResource(R.drawable.logo),
                 contentDescription = "Logo Image",
-                modifier = Modifier.width(180.dp)
+                modifier = Modifier.height(150.dp)
             )
 
             Spacer(modifier = Modifier.height(24.dp))
@@ -54,7 +52,7 @@ fun SplashScreen(navController: NavController) {
                 text = "YouTime",
                 fontSize = 32.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color.White
+                color = Color.Black
             )
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -62,8 +60,8 @@ fun SplashScreen(navController: NavController) {
             Text(
                 text = "Achieve More , Strees Less",
                 fontSize = 18.sp,
-                fontWeight = FontWeight.Black,
-                color = Color.White
+                fontWeight = FontWeight.Medium,
+                color = Color.Black
             )
 
             Spacer(modifier = Modifier.height(40.dp))

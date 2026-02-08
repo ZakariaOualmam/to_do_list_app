@@ -36,11 +36,6 @@ fun Login(navController: NavController) {
         modifier = Modifier.fillMaxSize()
 
     ){
-        Image(
-            painter = painterResource(R.drawable.login),
-            contentDescription = "background Image",
-            modifier = Modifier.fillMaxSize()
-        )
 
         Column(
             modifier = Modifier.fillMaxSize(),
